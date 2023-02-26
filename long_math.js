@@ -17,7 +17,7 @@ function divide(a, b, precision=20) {
     let divider = BigInt(b);
     let quotient = (dividend / divider).toString();
     let remainder = dividend % divider;
-    if (remainder == 0) {
+    if (remainder == 0 || precision == 0) {
         return quotient;
     } 
     let fraction = '.'
@@ -31,6 +31,3 @@ function divide(a, b, precision=20) {
     
 }
 
-let a = '23242350000000000000000000000'
-let b = '17000'
-console.log(divide(a, b, 300));
